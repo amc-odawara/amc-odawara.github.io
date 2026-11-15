@@ -18,5 +18,24 @@
       "/media/vehicles/138830.jpg",
       "/media/vehicles/180333.jpg"
     ]
+  },
+  {
+    "kind": "bike",
+    "status": "sold",
+    "visible": true,
+    "sort_order": 1,
+    "name": "CRM250R",
+    "year": 19913,
+    "mileage_km": 38499,
+    "inspection_ja": "無し",
+    "price": 30000,
+    "total_price": 350000,
+    "description_ja": "前後のホイールを17インチに交換したモタード仕様です。フロントには大きなブレーキが付いています。エンジンは腰上ＯＨしています。古い車両なので傷は多いです。",
+    "description_en": "It is a motard specification with 17 inch wheels on the front and rear. It has a large brake on the front. The engine has been overhauled. It is an old vehicle so it has many scratches.",
+    "main_image": "/media/vehicles/138831.jpg",
+    "gallery_images": [
+      "/media/vehicles/138832.jpg",
+      "/media/vehicles/138833.jpg"
+    ]
   }
 ]
