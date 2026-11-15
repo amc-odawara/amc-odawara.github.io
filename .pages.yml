@@ -1,10 +1,17 @@
-
+# AMC管理画面設定（Pages CMS / GitHub Pages）
 media:
-  input: media/vehicles
-  output: /media/vehicles
-  rename: safe
-  extensions: [jpg, jpeg, png, webp]
-
+  - name: vehicle_images
+    label: 車両写真
+    input: media/vehicles
+    output: /media/vehicles
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+  - name: product_images
+    label: 商品写真
+    input: media/products
+    output: /media/products
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
 content:
   - name: vehicle-list
     label: 販売車両（CAR & BIKE）
@@ -14,7 +21,7 @@ content:
     list: true
     fields:
       - name: kind
-        label: 車両の種類
+        label: ① 車両の種類
         type: select
         required: true
         options:
@@ -23,9 +30,8 @@ content:
               label: クルマ
             - name: bike
               label: バイク
-
       - name: status
-        label: 販売状況
+        label: ② 販売状況
         type: select
         required: true
         options:
@@ -36,68 +42,170 @@ content:
               label: 商談中
             - name: sold
               label: 売約済（SOLD OUT）
-
       - name: visible
         label: サイトに表示する
         type: boolean
-
       - name: sort_order
         label: 表示順（小さい数字が先）
         type: number
-
       - name: name
-        label: 車両名
+        label: ③ 車両名
         type: string
         required: true
-
       - name: year
         label: 初度登録年・年式
         type: number
-
       - name: mileage_km
         label: 走行距離（km）
         type: number
-
       - name: inspection_ja
         label: 車検・自賠責（日本語）
         type: string
-
       - name: inspection_en
         label: Inspection（English）
         type: string
-
       - name: price
-        label: 車両価格（円）
+        label: ④ 車両価格（円・数字のみ）
         type: number
-
       - name: total_price
-        label: 乗り出し参考価格（円）
+        label: 乗り出し参考価格（円・数字のみ）
         type: number
-
       - name: description_ja
-        label: 車両説明（日本語）
+        label: ⑤ 車両説明（日本語）
         type: text
-
       - name: description_en
         label: Vehicle description（English）
         type: text
-
       - name: main_image
-        label: メイン写真
+        label: ⑥ メイン写真（1枚）
         type: image
+        options:
+          media: vehicle_images
+      - name: gallery_images
+        label: ⑦ 追加写真（最大6枚）
+        type: image
+        options:
+          media: vehicle_images
+          multiple:
+            max: 6
+          unique: true
+      - name: youtube_url
+        label: YouTube動画URL（任意）
+        type: string
+      - name: instagram_url
+        label: Instagram投稿URL（任意）
+        type: string
 
+  - name: product-list
+    label: 販売パーツ＆ホビー
+    type: file
+    path: products.json
+    format: json
+    list: true
+    fields:
+      - name: category
+        label: 商品カテゴリー
+        type: select
+        required: true
+        options:
+          values:
+            - name: parts
+              label: クルマ・バイクのパーツ
+            - name: hobby
+              label: ヴィンテージ・ホビー
+            - name: other
+              label: その他
+      - name: status
+        label: 販売状況
+        type: select
+        required: true
+        options:
+          values:
+            - name: available
+              label: 販売中
+            - name: sold
+              label: 売約済み（SOLD OUT）
+      - name: visible
+        label: サイトに表示する
+        type: boolean
+      - name: sort_order
+        label: 表示順（小さい数字が先）
+        type: number
+      - name: name_ja
+        label: 商品名（日本語）
+        type: string
+        required: true
+      - name: name_en
+        label: Product Name（English）
+        type: string
+      - name: price
+        label: 販売価格（円・数字のみ）
+        type: number
+      - name: price_type
+        label: 価格表示
+        type: select
+        options:
+          values:
+            - name: tax_included
+              label: 税込
+            - name: tax_excluded
+              label: 税別
+            - name: inquire
+              label: お問い合わせ
+            - name: unspecified
+              label: 税区分未確認（旧価格など）
+      - name: condition
+        label: 商品の状態
+        type: select
+        options:
+          values:
+            - name: new
+              label: 新品
+            - name: used
+              label: 中古
+            - name: junk
+              label: ジャンク
+            - name: other
+              label: その他
+      - name: description_ja
+        label: 商品説明（日本語）
+        type: text
+      - name: description_en
+        label: Product Description（English）
+        type: text
+      - name: dimensions
+        label: サイズ・寸法
+        type: string
+      - name: delivery
+        label: 引き渡し方法
+        type: select
+        options:
+          values:
+            - name: pickup
+              label: 店頭引取
+            - name: shipping
+              label: 発送可能
+            - name: consult
+              label: 要相談
+      - name: main_image
+        label: メイン写真（1枚）
+        type: image
+        options:
+          media: product_images
       - name: gallery_images
         label: 追加写真（最大6枚）
         type: image
         options:
+          media: product_images
           multiple:
             max: 6
           unique: true
-
-      - name: youtube_url
-        label: YouTube動画URL
+      - name: auction_url
+        label: ヤフオク商品URL（任意）
         type: string
-
+      - name: youtube_url
+        label: YouTube動画URL（任意）
+        type: string
       - name: instagram_url
-        label: Instagram投稿URL
+        label: Instagram投稿URL（任意）
         type: string
