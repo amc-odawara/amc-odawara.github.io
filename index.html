@@ -15,6 +15,36 @@ button,input{font:inherit}a{color:#b3e3ff}a:hover{text-decoration-thickness:2px}
 .main{max-width:var(--max);margin:0 auto 55px;padding:0 18px}.panel{background:#172338;border:1px solid #374960;border-radius:16px;padding:clamp(18px,3.5vw,38px);margin:24px 0;box-shadow:0 10px 30px #0003}.panel[hidden]{display:none!important}.panel h2{font-size:clamp(1.3rem,3vw,1.8rem);border-left:5px solid var(--sky);padding-left:12px;margin:0 0 22px;line-height:1.45}.panel h3{font-size:1.15rem;margin:28px 0 8px;color:#cbe8fb}.panel h4{margin:17px 0 6px}.panel p{margin:10px 0}.eyebrow{color:#b4c0d2;font-size:.8rem;letter-spacing:.1em}.lead{font-size:1.05rem;font-weight:700}.highlight{color:#d9ebfb;font-size:1.12rem;font-weight:780}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0}.gallery img,.wide-photo{width:100%;height:auto;max-height:550px;object-fit:cover;border-radius:10px}.gallery img{aspect-ratio:4/3}.portrait-row{display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:25px;align-items:start}.portrait-row img{width:100%;border-radius:12px}.credit{font-size:.73rem;color:#adbac8}.side-photo{width:min(100%,290px);float:right;margin:0 0 12px 22px;border-radius:10px}.flyer{display:block;width:min(100%,680px);max-height:850px;object-fit:contain;margin:18px auto;border:1px solid #6b7788;border-radius:8px}.figure-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.figure-pair figure{margin:0;text-align:center}.figure-pair img{width:100%;height:270px;object-fit:contain;border-radius:10px;background:#223044}.figure-pair figcaption{font-size:.86rem;margin-top:3px;color:#d8e3ee}.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:18px}.card{background:#101a2b;border:1px solid #455970;border-radius:12px;padding:17px;min-width:0}.card h4{font-size:1.13rem;margin:9px 0 6px}.card p{font-size:.94rem}.pill{border-radius:999px;padding:4px 12px;border:1px solid #77a9cf;display:inline-block;font-size:.71rem;color:#d8e9f8}.pill.sold{border-color:#e0aaa2;color:#ffc0b4}.pill.unknown{border-color:#b9b9b9;color:#ddd}.price{font-size:1.12rem;font-weight:800;color:#fff}.table{width:100%;border-collapse:collapse}.table th,.table td{border-bottom:1px solid #475a70;padding:12px 8px;text-align:left}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:#fff!important;text-decoration:none;background:#28698a;border:1px solid #61a9c7;border-radius:8px;padding:10px 16px;margin:8px 8px 8px 0;font-weight:700}.btn:hover{background:#367a9a}.small{color:var(--muted);font-size:.85rem}.notice{background:#233248;border-left:4px solid #b9c6d7;padding:15px 17px;margin:16px 0;border-radius:6px}.list{padding-left:1.4rem}.placeholder{background:#1b2b40;border:1px dashed #5b7088;padding:22px;border-radius:9px;text-align:center;color:#b4c4d5}.mapframe{width:100%;height:340px;border:0;border-radius:12px;filter:saturate(.85)}.contact-list{display:grid;grid-template-columns:135px 1fr;gap:7px 14px}.contact-list dt{color:#afc1d1}.contact-list dd{margin:0;overflow-wrap:anywhere}.back-home{display:inline-flex;background:transparent;color:#cee9fa;border:1px solid #7b8ea1;border-radius:8px;padding:9px 15px;cursor:pointer;margin-top:24px}.empty{text-align:center;color:#bfcedb;border:1px dashed #50647b;padding:18px;border-radius:10px}.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}.video{width:100%;aspect-ratio:9/16;max-height:480px;border:0;border-radius:10px;background:#0a121f}.site-footer{text-align:center;color:#b7c4d5;padding:35px 18px;font-size:.85rem}
 @media(max-width:720px){.site-header{padding:0;margin:0}.hero{border-radius:0;aspect-ratio:2.25/1}.logo{width:90%}.dash{border-radius:16px;margin:16px 12px 20px;padding:13px}.switch-grid{gap:7px;margin:12px 0 18px}.switch{min-height:83px;padding:7px 5px}.switch-icon{font-size:1.2rem}.switch-label{font-size:.7rem}.dials{gap:7px}.dial{border-width:5px;outline-width:1px}.dial .name{font-size:.64rem}.dial-holder{padding:13px 6px}.portrait-row{grid-template-columns:1fr}.portrait-row img{max-width:310px}.gallery{gap:8px}.figure-pair img{height:190px}.side-photo{float:none;display:block;margin:12px auto}.video-grid{grid-template-columns:1fr}.mapframe{height:270px}.contact-list{grid-template-columns:92px 1fr}}@media(max-width:400px){.header-meta{flex-wrap:wrap;justify-content:center}.switch-label{font-size:.66rem}.switch{min-height:73px}.dash-head{font-size:.75rem}.dial .glyph{font-size:1.3rem}.dial .name{font-size:.6rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* CAR / BIKE共通カード：メイン写真＋追加写真（最大6枚） */
+#carList,#bikeList{display:grid;grid-template-columns:1fr;gap:22px}
+.vehicle-card{padding:20px}
+.vehicle-summary{display:grid;grid-template-columns:minmax(210px,38%) minmax(0,1fr);gap:23px;align-items:start}
+.vehicle-cover{width:100%;aspect-ratio:16/11;background:#223247;border-radius:11px;overflow:hidden}
+.vehicle-cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .18s}
+.vehicle-cover button:hover img{transform:scale(1.025)}
+.vehicle-cover .photo-button{display:block;width:100%;height:100%;padding:0;border:none;background:transparent;cursor:zoom-in}
+.vehicle-cover .photo-placeholder{display:flex;align-items:center;justify-content:center;height:100%;color:#b5c4d5;text-align:center;padding:12px}
+.vehicle-details h4{margin:10px 0;font-size:1.25rem}
+.vehicle-details p{margin:8px 0}.vehicle-spec{font-size:.89rem;color:#cbdbeb}
+.vehicle-price{font-weight:750;font-size:1rem}
+.vehicle-description{white-space:pre-line;line-height:1.8}
+.vehicle-sns{margin:15px 0 0;padding-top:13px;border-top:1px solid #324962}
+.vehicle-sns-label{color:#bccddd;font-size:.79rem;margin:0 0 7px!important}
+.vehicle-sns .btn{margin:2px 8px 4px 0}
+.vehicle-gallery{border-top:1px solid #34465c;margin-top:17px;padding-top:14px}
+.vehicle-gallery>summary{list-style:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer;background:#273d52;color:#dceeff;border:1px solid #607990;border-radius:8px;padding:9px 14px;font-weight:700}
+.vehicle-gallery>summary::-webkit-details-marker{display:none}
+.vehicle-gallery>summary::before{content:"＋";font-size:1.1rem}
+.vehicle-gallery[open]>summary::before{content:"−"}
+.vehicle-thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:14px}
+.vehicle-thumbs button{padding:0;aspect-ratio:4/3;border:1px solid #536c86;background:#15283d;border-radius:9px;overflow:hidden;cursor:zoom-in}
+.vehicle-thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-dialog{max-width:min(92vw,960px);max-height:92vh;border:1px solid #586a7c;border-radius:12px;padding:12px;background:#142033;color:#fff}
+.photo-dialog::backdrop{background:rgba(0,0,0,.85)}
+.photo-dialog img{display:block;max-width:100%;max-height:78vh;object-fit:contain;margin:auto}
+.photo-dialog .close-photo{display:block;margin:0 0 10px auto;background:#324a61;color:#fff;border:1px solid #8393a2;border-radius:7px;padding:6px 12px;cursor:pointer}
+@media(max-width:750px){.vehicle-summary{grid-template-columns:1fr;gap:12px}.vehicle-cover{aspect-ratio:16/10}.vehicle-thumbs{gap:7px}.vehicle-card{padding:14px}}
 </style>
 </head>
 <body>
@@ -103,12 +133,14 @@ button,input{font:inherit}a{color:#b3e3ff}a:hover{text-decoration-thickness:2px}
 <p class="notice"><span class="jp">営業時間・定休日は決まっておりません。外出や作業で留守の場合がありますので、初めてお越しの方は事前にお電話またはメールでご連絡ください。</span><span class="en">Business hours and days off vary. We may be away or occupied with work, so please call or email before your first visit.</span></p><a class="btn" href="https://maps.app.goo.gl/rL9qy7QXYp221rFp8" target="_blank" rel="noopener"><span class="jp">Googleマップで場所を確認</span><span class="en">Open in Google Maps</span></a>
 </section>
 <div style="text-align:center"><button class="back-home" id="backHome">↑ <span class="jp">トップページに戻る</span><span class="en">Back to Home</span></button></div>
-</main><footer class="site-footer">© AMC MOTORCYCLES & CAR SHOP · ODAWARA</footer>
+</main>
+<dialog id="photoDialog" class="photo-dialog" aria-label="車両写真を拡大表示"><button class="close-photo" type="button" id="photoClose">閉じる ×</button><img id="photoLarge" src="" alt="車両写真"></dialog>
+<footer class="site-footer">© AMC MOTORCYCLES & CAR SHOP · ODAWARA</footer>
 <script>
 'use strict';
 /* CMS導入前の試作版です。車両と商品の情報は下記配列を変更する構造にしています。 */
 const data={
-vehicles:[{category:'bike',status:'sold',name:'HONDA CBR954RR',year:'2003',distance:'54,000 km',inspectionJa:'なし',inspectionEn:'Not included',price:'800,000円',total:'880,000円',descriptionJa:'ワンオーナー車両。通勤に使用され、エンジンは好調です。細かな傷はありますが、事故による大きな損傷はありません。ETC、USB電源、ドライブレコーダー付き。アクラポビッチ製マフラー装着。',descriptionEn:'One-owner motorcycle, previously used for commuting. The engine is in good running condition. Minor cosmetic scratches but no major accident damage reported. Equipped with ETC, USB power outlet, dashcam and an Akrapovič exhaust.',images:[],youtube:'',social:''}],
+vehicles:[{"kind":"bike","status":"sold","visible":true,"sort_order":0,"name":"HONDA CBR954RR","year":2003,"mileage_km":54000,"inspection_ja":"なし","inspection_en":"None","price":800000,"total_price":880000,"description_ja":"ワンオーナー車両。通勤で使用され、エンジンは好調です。小傷はありますが、大きな事故損傷はありません。ETC・USB電源・ドライブレコーダー付き。アクラポビッチ製マフラー装着。","description_en":"One-owner motorcycle previously used for commuting. The engine runs well. There are minor scratches but no major accident damage reported. Equipped with ETC, USB power, a dashcam, and an Akrapovič exhaust.","main_image":"https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/2872784/a64f1dcf7a075e888c647755044f5581_a5874f94d12bffcbf8e3b5fd01dc4e0e.jpg?width=720","gallery_images":["https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/2872784/e4bd78392dd8c71009afa2d5035560e0_d16e10a3afbfd72ecf723c0ce6364bad.jpg?width=720"],"youtube_url":"","instagram_url":""}],
 products:[{status:'checking',nameJa:'スポーツブラスター（ガムボール販売機能付き）',nameEn:'Sports Blaster Mechanical Pinball Game',price:'200,000円',descriptionJa:'ターゲットを狙う大型アーケードゲーム。分解可能な箇所は清掃済み。大型商品のため直接のお引き取りを希望します。配送は要相談。',descriptionEn:'Vintage target-shooting mechanical arcade game with gumball dispensing. Parts have been cleaned where accessible. Local pickup preferred; shipping by arrangement.',images:[],youtube:'',auction:''},{status:'checking',nameJa:'テーブルサッカー台（カールスバーグ）',nameEn:'Carlsberg Table Football',price:'10,000円',descriptionJa:'サイズ約74 × 137 × 91cm。購入後ほぼ未使用で、大きな傷は見当たりません。大型のため直接のお引き取りを希望します。',descriptionEn:'Carlsberg foosball table, approx. 74 × 137 × 91 cm. Barely used, with no major visible damage reported. Local pickup preferred.',images:[],youtube:'',auction:''}]
 };
 function escapeHTML(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -119,10 +151,79 @@ function showPanel(id){active=id;document.querySelectorAll('[data-panel]').forEa
 buttons.forEach(b=>b.addEventListener('click',()=>showPanel(b.dataset.section)));
 document.getElementById('dialContact').addEventListener('click',()=>showPanel('contact'));
 document.getElementById('backHome').addEventListener('click',()=>{showPanel('home');window.scrollTo({top:0,behavior:'smooth'});});
-function card(item,kind){let sold=item.status==='sold',checking=item.status==='checking';let flag=sold?'SOLD OUT':checking?(lang==='ja'?'在庫未確認':'Availability unconfirmed'):(item.status==='reserved'?(lang==='ja'?'商談中':'Reserved'):(lang==='ja'?'販売中':'For sale'));let nm=kind==='vehicle'?item.name:(lang==='ja'?item.nameJa:item.nameEn);let desc=lang==='ja'?item.descriptionJa:item.descriptionEn;let imgs=(item.images||[]).filter(safeURL).slice(0,3);let photo=imgs.length?`<div class="gallery">${imgs.map(u=>`<img alt="${escapeHTML(nm)}" src="${escapeHTML(u)}" loading="lazy">`).join('')}</div>`:'';let specs=kind==='vehicle'?`<p class="small">${escapeHTML(item.year)} / ${escapeHTML(item.distance)} / ${lang==='ja'?'車検':'Inspection'}: ${escapeHTML(lang==='ja'?item.inspectionJa:item.inspectionEn)}</p><p>${lang==='ja'?'車両価格':'Vehicle price'} <strong>${escapeHTML(item.price)}</strong><br>${lang==='ja'?'乗り出し参考価格':'Estimated total'} ${escapeHTML(item.total)}</p>`:`<p class="price">${escapeHTML(item.price)}</p>`;let yt=safeURL(item.youtube);let auction=safeURL(item.auction);return `<article class="card"><span class="pill ${sold?'sold':checking?'unknown':''}">${escapeHTML(flag)}</span><h4>${escapeHTML(nm)}</h4>${photo}${specs}<p>${escapeHTML(desc)}</p>${yt?`<a class="btn" target="_blank" rel="noopener" href="${escapeHTML(yt)}">YouTube</a>`:''}${auction?`<a class="btn" target="_blank" rel="noopener" href="${escapeHTML(auction)}">${lang==='ja'?'ヤフオクで見る':'View auction'}</a>`:''}</article>`;}
-function render(){for(const [kind,id] of [['car','carList'],['bike','bikeList']]){const list=data.vehicles.filter(v=>v.category===kind).sort((a,b)=>(a.status==='sold')-(b.status==='sold'));document.getElementById(id).innerHTML=list.length?list.map(x=>card(x,'vehicle')).join(''):`<p class="empty">${lang==='ja'?'現在、掲載車両はありません。':'No vehicles currently listed.'}</p>`;}document.getElementById('productList').innerHTML=data.products.slice().sort((a,b)=>(a.status==='sold')-(b.status==='sold')).map(x=>card(x,'product')).join('');}
+function safeMediaURL(x){
+ const v=String(x||'').trim();
+ if(/^https:\/\//i.test(v))return v;
+ if(/^\/(?!\/)[a-zA-Z0-9_\-./%]+(?:\?[a-zA-Z0-9_\-=&#.%]*)?$/.test(v))return v;
+ if(/^(?:media|assets)\/[a-zA-Z0-9_\-./%]+$/.test(v))return v;
+ return '';
+}
+function yen(value){let n=Number(value);return Number.isFinite(n)&&n>=0?n.toLocaleString('ja-JP')+'円':(lang==='ja'?'お問い合わせください':'Please inquire');}
+function vehicleCard(v){
+ const sold=v.status==='sold';
+ const label=sold?'SOLD OUT':v.status==='negotiating'?(lang==='ja'?'商談中':'Under negotiation'):(lang==='ja'?'販売中':'For sale');
+ const name=String(v.name||'').trim() || (lang==='ja'?'車両名未設定':'Vehicle');
+ const cover=safeMediaURL(v.main_image);
+ const extras=(Array.isArray(v.gallery_images)?v.gallery_images:[]).map(safeMediaURL).filter(Boolean).slice(0,6);
+ const alt=escapeHTML(name);
+ const coverHtml=cover?`<button type="button" class="photo-button" data-photo="${escapeHTML(cover)}" data-alt="${alt}" aria-label="${alt}のメイン写真を拡大"><img src="${escapeHTML(cover)}" alt="${alt}のメイン写真" loading="lazy"></button>`:`<div class="photo-placeholder">${lang==='ja'?'写真準備中':'Photo coming soon'}</div>`;
+ const year=String(v.year||'').trim();
+ const dist=Number(v.mileage_km);
+ const distStr=Number.isFinite(dist)&&dist>=0?`${dist.toLocaleString('ja-JP')} km`:'';
+ const inspection=lang==='ja'?v.inspection_ja:v.inspection_en;
+ const info=[year?year+(lang==='ja'?'年式':' model'):'',distStr,inspection?(lang==='ja'?'車検・自賠責：':'Inspection: ')+inspection:''].filter(Boolean).map(escapeHTML).join(' / ');
+ const desc=lang==='ja'?v.description_ja:v.description_en;
+ const yt=safeURL(v.youtube_url),ig=safeURL(v.instagram_url);
+ const sns=yt||ig?`<div class="vehicle-sns"><p class="vehicle-sns-label">${lang==='ja'?'車両の動画・SNS':'Videos & social posts'}</p>${yt?`<a class="btn" href="${escapeHTML(yt)}" target="_blank" rel="noopener noreferrer">▶ YouTube</a>`:''}${ig?`<a class="btn" href="${escapeHTML(ig)}" target="_blank" rel="noopener noreferrer">◎ Instagram</a>`:''}</div>`:'';
+ const gallery=extras.length?`<details class="vehicle-gallery"><summary>${lang==='ja'?'ほかの写真を見る':'View more photos'}（${extras.length}${lang==='ja'?'枚':''}）</summary><div class="vehicle-thumbs">${extras.map((url,i)=>`<button type="button" data-photo="${escapeHTML(url)}" data-alt="${alt} - ${i+2}" aria-label="${alt}の写真${i+2}を拡大"><img src="${escapeHTML(url)}" alt="${alt}の追加写真${i+2}" loading="lazy"></button>`).join('')}</div></details>`:'';
+ const total=v.total_price?`<p>${lang==='ja'?'乗り出し参考価格':'Estimated total'}：${yen(v.total_price)}</p>`:'';
+ return `<article class="card vehicle-card"><div class="vehicle-summary"><div class="vehicle-cover">${coverHtml}</div><div class="vehicle-details"><span class="pill ${sold?'sold':''}">${label}</span><h4>${alt}</h4>${info?`<p class="vehicle-spec">${info}</p>`:''}<p class="vehicle-price">${lang==='ja'?'車両価格':'Vehicle price'}：${yen(v.price)}</p>${total}<p class="vehicle-description">${escapeHTML(desc||'')}</p>${sns}</div></div>${gallery}</article>`;
+}
+function productCard(item){
+ const sold=item.status==='sold',checking=item.status==='checking';
+ const flag=sold?'SOLD OUT':checking?(lang==='ja'?'在庫未確認':'Availability unconfirmed'):(item.status==='reserved'?(lang==='ja'?'商談中':'Reserved'):(lang==='ja'?'販売中':'For sale'));
+ const name=lang==='ja'?item.nameJa:item.nameEn;
+ const desc=lang==='ja'?item.descriptionJa:item.descriptionEn;
+ const imgs=(item.images||[]).filter(safeURL).slice(0,3);
+ const photo=imgs.length?`<div class="gallery">${imgs.map(u=>`<img src="${escapeHTML(u)}" alt="${escapeHTML(name)}" loading="lazy">`).join('')}</div>`:'';
+ const yt=safeURL(item.youtube),auction=safeURL(item.auction);
+ return `<article class="card"><span class="pill ${sold?'sold':checking?'unknown':''}">${escapeHTML(flag)}</span><h4>${escapeHTML(name)}</h4>${photo}<p class="price">${escapeHTML(item.price)}</p><p>${escapeHTML(desc)}</p>${yt?`<a class="btn" target="_blank" rel="noopener" href="${escapeHTML(yt)}">YouTube</a>`:''}${auction?`<a class="btn" target="_blank" rel="noopener" href="${escapeHTML(auction)}">${lang==='ja'?'ヤフオクで見る':'View auction'}</a>`:''}</article>`;
+}
+function render(){
+ for(const [kind,id] of [['car','carList'],['bike','bikeList']]){
+   const order={available:0,negotiating:1,sold:2};
+   const list=data.vehicles.filter(v=>v.kind===kind&&v.visible!==false).sort((a,b)=>(order[a.status]??1)-(order[b.status]??1)||(Number(a.sort_order)||0)-(Number(b.sort_order)||0));
+   document.getElementById(id).innerHTML=list.length?list.map(vehicleCard).join(''):`<p class="empty">${lang==='ja'?'現在、掲載車両はありません。':'No vehicles currently listed.'}</p>`;
+ }
+ document.getElementById('productList').innerHTML=data.products.slice().sort((a,b)=>(a.status==='sold')-(b.status==='sold')).map(productCard).join('');
+}
+/* ページ本体はGitHub Pages、車両情報はPages CMSで編集するvehicles.jsonから読み込みます。 */
+async function loadVehicles(){
+ try{
+   const result=await fetch('./vehicles.json',{cache:'no-store'});
+   if(!result.ok)throw new Error(`HTTP ${result.status}`);
+   const records=await result.json();
+   if(!Array.isArray(records))throw new Error('車両データが配列ではありません');
+   data.vehicles=records;
+   render();
+ }catch(err){
+   console.warn('車両データが未配置、または取得できません。初期データを表示します。',err);
+ }
+}
+const photoDialog=document.getElementById('photoDialog');
+document.addEventListener('click',event=>{
+ const btn=event.target.closest('[data-photo]');
+ if(!btn)return;
+ const src=safeMediaURL(btn.getAttribute('data-photo'));
+ if(!src)return;
+ const image=document.getElementById('photoLarge');
+ image.src=src;image.alt=btn.getAttribute('data-alt')||'車両写真';
+ if(photoDialog.showModal)photoDialog.showModal();else window.open(src,'_blank','noopener');
+});
+document.getElementById('photoClose').addEventListener('click',()=>photoDialog.close());
+photoDialog.addEventListener('click',event=>{if(event.target===photoDialog)photoDialog.close()});
 function changeLang(value){lang=value;document.body.classList.toggle('lang-en',lang==='en');document.documentElement.lang=value;document.getElementById('btnJa').setAttribute('aria-pressed',String(lang==='ja'));document.getElementById('btnEn').setAttribute('aria-pressed',String(lang==='en'));render();}
 document.getElementById('btnJa').addEventListener('click',()=>changeLang('ja'));document.getElementById('btnEn').addEventListener('click',()=>changeLang('en'));
-document.getElementById('backHome').hidden=true;render();
+document.getElementById('backHome').hidden=true;render();loadVehicles();
 </script>
 </body></html>

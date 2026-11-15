@@ -1,0 +1,23 @@
+[
+  {
+    "kind": "bike",
+    "status": "sold",
+    "visible": true,
+    "sort_order": 0,
+    "name": "HONDA CBR954RR",
+    "year": 2003,
+    "mileage_km": 54000,
+    "inspection_ja": "なし",
+    "inspection_en": "None",
+    "price": 800000,
+    "total_price": 880000,
+    "description_ja": "ワンオーナー車両。通勤で使用され、エンジンは好調です。小傷はありますが、大きな事故損傷はありません。ETC・USB電源・ドライブレコーダー付き。アクラポビッチ製マフラー装着。",
+    "description_en": "One-owner motorcycle previously used for commuting. The engine runs well. There are minor scratches but no major accident damage reported. Equipped with ETC, USB power, a dashcam, and an Akrapovič exhaust.",
+    "main_image": "https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/2872784/a64f1dcf7a075e888c647755044f5581_a5874f94d12bffcbf8e3b5fd01dc4e0e.jpg?width=720",
+    "gallery_images": [
+      "https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/2872784/e4bd78392dd8c71009afa2d5035560e0_d16e10a3afbfd72ecf723c0ce6364bad.jpg?width=720"
+    ],
+    "youtube_url": "",
+    "instagram_url": ""
+  }
+]
