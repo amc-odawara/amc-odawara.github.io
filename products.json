@@ -7,36 +7,31 @@
     "name_ja": "スポーツブラスター（ガムボール販売機能付き）",
     "name_en": "Sports Blaster (Gumball Arcade Game)",
     "price": 200000,
-    "price_type": "unspecified",
+    "price_type": "tax_included",
     "condition": "used",
     "description_ja": "ターゲットを狙って遊ぶ、ガムボール販売機能付きの機械式アーケードゲームです。分解できる部分は分解・清掃しています。大型で重量があるため、店頭での直接引き取りを希望します。配送をご希望の場合はご相談ください。",
     "description_en": "A mechanical target-shooting arcade game with a gumball dispenser. Removable components have been disassembled and cleaned. Local pickup is preferred due to its size and weight; shipping can be discussed.",
-    "dimensions": "",
     "delivery": "pickup",
-    "main_image": "",
-    "gallery_images": [],
-    "auction_url": "",
-    "youtube_url": "",
-    "instagram_url": ""
+    "main_image": "/media/products/9f4674fe4fab1b806767467de5754feb7597ed0c29dec89679c345c52807bde6-1.jpg",
+    "gallery_images": [
+      "/media/products/15760093140ba2fa5711f51999d4b5148c3d520233da2dd706c2e46f083e5052.jpg"
+    ]
   },
   {
     "category": "hobby",
     "status": "available",
     "visible": true,
     "sort_order": 1,
-    "name_ja": "ガムボールマシン",
-    "name_en": "Gumball Machine",
-    "price": null,
-    "price_type": "inquire",
-    "condition": "",
-    "description_ja": "商品情報・販売価格の詳細はお問い合わせください。写真は準備中です。",
+    "name_ja": "テーブルサッカー台【カールスバーグ】",
+    "price": 10000,
+    "price_type": "tax_included",
+    "description_ja": "カールスバーグのテーブルサッカーです。\n\n大きさが縦７４×横１３７×高さ９１です。\n\n目立った大きな傷は無いように思います。\n\n大きすぎて、購入してからほぼ未使用です。\n\nパーツは外してありますが、人形やサッカーボールはそろっていました。\n\n大きいので手渡しを希望します。\n\n車への積み込みは手伝います。",
     "description_en": "Please contact AMC for details and pricing. Photos will be added soon.",
-    "dimensions": "",
-    "delivery": "consult",
-    "main_image": "",
-    "gallery_images": [],
-    "auction_url": "",
-    "youtube_url": "",
-    "instagram_url": ""
+    "dimensions": "縦７４×横１３７×高さ９１",
+    "delivery": "pickup",
+    "main_image": "/media/products/fbb30b7f440636607bb54340957301a97456b9e75076b58c1cb3d6bb12aff16e.jpg",
+    "gallery_images": [
+      "/media/products/eb9effaf1e3ae1210d3fba43d6488f7958f414d591318b2f6acb99044e53be01.jpg"
+    ]
   }
 ]
