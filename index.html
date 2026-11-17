@@ -84,11 +84,11 @@ button,input{font:inherit}a{color:#b3e3ff}a:hover{text-decoration-thickness:2px}
 .stove-full-story h4{color:#d6eaff;margin:18px 0 6px}
 .stove-full-story p{line-height:1.85}
 .stove-sys-parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
-.stove-sys-parts article{background:#1b2d42;border:1px solid #455970;border-radius:8px;padding:12px}
+.stove-sys-parts article{background:#1b2d42;border:1px solid #455970;border-radius:8px;padding:12px;min-width:0}
 .stove-sys-parts h4{margin:0 0 8px}
-.stove-reference{margin-top:18px;border-top:1px solid #465b70;padding-top:15px}
-.stove-reference summary{cursor:pointer;color:#cbe8fb;font-weight:700;padding:10px 12px;border:1px solid #607990;border-radius:8px;background:#263f57}
-.stove-reference img{display:block;max-width:min(100%,680px);height:auto;margin:16px auto}
+.stove-sys-parts article p{margin:0 0 12px}
+.stove-photo-slot{display:flex;justify-content:center;align-items:center;min-height:160px;aspect-ratio:16/10;border:1.5px dashed #71859a;border-radius:8px;background:#111e31;color:#b7c4d3;text-align:center;padding:16px;font-size:.9rem}
+@media(max-width:700px){.stove-photo-slot{min-height:155px}}
 @media(max-width:700px){.stove-sys-parts{grid-template-columns:1fr}}
 </style>
 <link rel="canonical" href="https://amc-odawara.github.io/">
@@ -170,12 +170,12 @@ button,input{font:inherit}a{color:#b3e3ff}a:hover{text-decoration-thickness:2px}
 <h3>AMCファイヤーコントロールシステム（AMCFCS）</h3>
 <p>着火の補助、燃焼状態の数値による確認、排煙浄化を組み合わせて、薪ストーブの燃焼を支えるシステムです。</p>
 <div class="stove-sys-parts">
-<article><h4>薪チャッカー</h4><p>ペレットの燃焼と空気の流れを利用して、薪への着火を助けます。</p></article>
-<article><h4>燃焼モニター</h4><p>排気温度・酸素濃度・煙突の引きを表示し、燃焼の状態を数値で確かめます。</p></article>
-<article><h4>排煙浄化触媒</h4><p>WHITE BEAM製の触媒を使い、排気に残る一酸化炭素や未燃焼ガスの低減を図ります。</p></article>
+<article><h4>薪チャッカー</h4><p>ペレットの燃焼と空気の流れを利用して、薪への着火を助けます。</p><div class="stove-photo-slot" aria-label="薪チャッカーの製品写真掲載予定">製品写真は掲載予定です</div></article>
+<article><h4>燃焼モニター</h4><p>排気温度・酸素濃度・煙突の引きを表示し、燃焼の状態を数値で確かめます。</p><div class="stove-photo-slot" aria-label="燃焼モニターの製品写真掲載予定">製品写真は掲載予定です</div></article>
+<article><h4>排煙浄化触媒</h4><p>WHITE BEAM製の触媒を使い、排気に残る一酸化炭素や未燃焼ガスの低減を図ります。</p><div class="stove-photo-slot" aria-label="排煙浄化触媒の製品写真掲載予定">製品写真は掲載予定です</div></article>
 </div>
+<p class="small">※性能や削減率は使用条件・測定条件により異なります。</p>
 <p>システムの価格はお問い合わせください。</p>
-<details class="stove-reference"><summary>AMCファイヤーコントロールシステムの詳細・参考資料を見る</summary><p>薪チャッカー・燃焼モニター・排煙浄化触媒の仕組みをまとめた参考資料です。性能や削減率は使用条件・測定条件により異なります。</p><a href="stove.html#system-title" class="btn">システムの詳しい説明と資料を見る</a></details>
 <h3>薪ストーブの販売・設置</h3><p>暮らし方や建物に合わせて薪ストーブの機種選びと設置プランをご案内します。初めての方にも工事や使い方をご説明します。</p>
 <h3>薪ストーブ・暖炉・煙突の清掃</h3><p>ストーブ・暖炉・煙突の状態に合わせて、清掃・点検・メンテナンスをご提案します。</p>
 <p><a class="btn" href="stove.html">薪ストーブの専用ページを見る</a> <a class="btn" href="#contact">薪ストーブについて問い合わせる</a></p>
