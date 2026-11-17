@@ -73,10 +73,11 @@ button,input{font:inherit}a{color:#b3e3ff}a:hover{text-decoration-thickness:2px}
 .stove-overview .stove-detail:hover{background:#324d69}.stove-overview .stove-detail:focus-visible{outline:2px solid var(--sky);outline-offset:4px}
 @media(max-width:680px){.stove-overview{grid-template-columns:minmax(0,1fr)}}
 
-/* 2026-11-17: vertically scrolling complete site; only AMCFCS reference remains collapsible. */
-.main .panel[hidden]{display:none!important}
+/* 2026-11-17: AMC control-panel view: only the selected content panel is visible. */
+.main > .panel{display:none!important}
+.main > .panel.is-active:not([hidden]){display:block!important}
 .main .panel{scroll-margin-top:18px}
-.switch[aria-pressed="true"]{background:linear-gradient(160deg,#515960,#30363d);border-color:#747f89;box-shadow:inset 0 2px 2px #e0e5e72e,0 3px 1px #10141b}
+.switch[aria-pressed="true"]{background:linear-gradient(155deg,#526e81,#2b465d);border-color:#a0d8f2;box-shadow:inset 0 0 0 1px #81cbf0,0 3px 1px #141a22}
 .vehicle-gallery h5{font-size:.96rem;color:#dceeff;margin:0 0 8px}
 .stove-full-story{margin:22px 0;padding:20px;background:#111e31;border:1px solid #455970;border-radius:12px}
 .stove-full-story h3{margin:14px 0 10px}
@@ -128,7 +129,7 @@ button,input{font:inherit}a{color:#b3e3ff}a:hover{text-decoration-thickness:2px}
 </div></div>
 </nav>
 <main class="main">
-<section class="panel" id="home" data-panel="home">
+<section class="panel is-active" id="home" data-panel="home">
   <div class="eyebrow">ACCESS & INFORMATION</div><h2><span class="jp">店舗アクセス</span><span class="en">Visit AMC</span></h2>
   <p><span class="jp">クルマ・バイク、旧車やカスタムのご相談はAMCへ。ご来店前にご連絡ください。</span><span class="en">AMC specializes in cars, motorcycles, classics and custom vehicles. Please contact us before visiting.</span></p>
   <iframe class="mapframe" title="AMC 小田原の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?ll=35.2955943%2C139.1533177&amp;z=17&amp;q=AMC%20%E5%B0%8F%E7%94%B0%E5%8E%9F%E5%B8%82%E4%B8%AD%E6%9B%BD%E6%A0%B9232-4&amp;cid=4923781517253119338&amp;output=embed"></iframe>
@@ -228,12 +229,16 @@ let lang='ja',active='home';
 const buttons=[...document.querySelectorAll('.switch[data-section]')];
 function showPanel(id){
  const target=document.getElementById(id);
- if(!target||!target.matches('[data-panel]'))return;
+ if(!target||!target.matches('.main > [data-panel]'))return;
  active=id;
- document.querySelectorAll('[data-panel]').forEach(panel=>{panel.hidden=panel.dataset.panel!==id;});
+ document.querySelectorAll('.main > [data-panel]').forEach(panel=>{
+   const selected=panel===target;
+   panel.hidden=!selected;
+   panel.classList.toggle('is-active',selected);
+ });
  buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.section===id)));
  document.getElementById('backHome').hidden=id==='home';
- target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+ // Do not jump down the page: each dashboard switch replaces the map/content in place.
 }
 buttons.forEach(b=>b.addEventListener('click',()=>showPanel(b.dataset.section)));
 document.getElementById('dialContact').addEventListener('click',()=>showPanel('contact'));
